@@ -1,0 +1,474 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+/* Basic reset and styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+/* Font size for devices with a width of at least 480px (small tablets) */
+@media (min-width: 480px) {
+    html {
+        font-size: 16px;
+        /* 1rem = 16px */
+    }
+}
+
+/* Font size for devices with a width of at least 768px (tablets) */
+@media (min-width: 768px) {
+    html {
+        font-size: 20px;
+        /* 1rem = 18px */
+    }
+}
+
+/* Font size for devices with a width of at least 1024px (desktops and larger screens) */
+@media (min-width: 1024px) {
+    html {
+        font-size: 25px;
+        /* 1rem = 20px */
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.logo {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin-top: 20px;
+
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    background: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    margin: 20px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* Light mode styles */
+/* Default to dark mode */
+body {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Light mode styles */
+body.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body.light-mode {
+    background: #f4f4f4;
+    color: #001a66;
+}
+
+body.light-mode header {
+    background: #333;
+}
+
+body.light-mode section {
+    background: #fff;
+    border: 1px solid #ddd;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background: #333;
+    color: #f4f4f4;
+}
+
+body.dark-mode header {
+    background: #444;
+}
+
+body.dark-mode section {
+    background: #555;
+    border: 1px solid #666;
+}
+
+/* Existing styles */
+/* welcome section styles */
+.welcome-section {
+    text-align: center;
+    padding-bottom: 30px;
+    font-size: 20px;
+}
+
+.text {
+    background: linear-gradient(to right, #ff0066, #ff00bf, #ff0000);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    padding: 35px;
+    font-size: 35px;
+    font-style: italic;
+}
+
+a.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    background: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 2rem;
+}
+
+a.btn-outline {
+    border: 2px solid cyan;
+    color: cyan;
+    background-color: transparent;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    margin: 60px;
+}
+
+a.btn-outline:hover {
+    color: #ff9900;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+}
+
+/* skills section styles */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    background: #f4f4f4;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.skill-item {
+    text-align: center;
+    font-size: 24px;
+    width: 190px;
+    padding: 10px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: scale(1.05);
+    background: #e0e0e0;
+}
+
+.skill-item i {
+    display: block;
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: #333;
+    /* Default color */
+}
+
+.skill-item a {
+    text-decoration: none;
+    /* Ensures no underline or extra content */
+}
+
+.skill-item a i {
+    font-size: 18px;
+    /* Adjust as needed */
+    color: #000;
+    /* Adjust the color to match your design */
+    margin-left: 5px;
+    /* Optional, adds space between text and icon */
+}
+
+.skill-item p {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+    /* Default color */
+}
+
+.skill-item:nth-child(1) i {
+    color: #e44d26;
+}
+
+/* HTML */
+.skill-item:nth-child(2) i {
+    color: #1572b6;
+}
+
+/* CSS */
+.skill-item:nth-child(3) i {
+    color: #f7e018;
+}
+
+/* JavaScript */
+.skill-item:nth-child(4) i {
+    color: #61dafb;
+}
+
+/* React.js */
+.skill-item:nth-child(5) i {
+    color: #563d7c;
+}
+
+/* Bootstrap */
+.skill-item:nth-child(6) i {
+    color: #306998;
+}
+
+/* Python */
+.skill-item:nth-child(7) i {
+    color: #003b57;
+}
+
+/* SQLite */
+.skill-item:nth-child(8) i {
+    color: #8cc84b;
+}
+
+/* Node.js */
+.skill-item:nth-child(9) i {
+    color: #6cdb61;
+}
+
+/* Express.js */
+/* project section styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.projects-section {
+    padding: 20px;
+    background-color: #fff;
+}
+
+.projects-section h2 {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.project-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    max-width: 350px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    margin-top: 50px;
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.project-name {
+    font-size: 1em;
+    margin: 16px 0;
+    color: red;
+}
+
+.project-description {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 16px;
+}
+
+.project-links {
+    margin-top: 16px;
+}
+
+.project-link {
+    display: block;
+    color: #007bff;
+    text-decoration: none;
+    margin: 8px 0;
+    font-size: 1em;
+}
+
+.project-link i {
+    margin-right: 8px;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
+
+.login-data {
+    color: orange;
+    font-size: 25px;
+}
+
+.user_pass {
+    color: #f70ce4;
+}
+
+.pass_user {
+    color: black;
+}
+
+/* contact section styles */
+
+.contact-section h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-form label {
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+.contact-info {
+    font-size: 1em;
+}
+
+.contact-info a {
+    color: #00ffff;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.social-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-links li {
+    margin-bottom: 10px;
+}
+
+.social-links a {
+    color: #00ffff;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+/* footer section styles */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+
+.footer-content p {
+    margin-bottom: 10px;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+}
+
+.social-links li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.social-links a {
+    color: cyan;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
